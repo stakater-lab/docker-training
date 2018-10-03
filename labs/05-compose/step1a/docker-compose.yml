@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  frontend:
+    image: stakaterlabs/hello-world-front:latest
+  backend:
+    image: stakaterlabs/hello-world-back:latest
+
