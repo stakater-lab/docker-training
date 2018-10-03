@@ -22,15 +22,17 @@ Check the frontend container IP
 
 `docker inspect --format='{{.NetworkSettings.Networks.mybridge.IPAddress}}' hello-world-front`
 
-Call the frontend application endpoint with curl or open in browser
+Call the frontend application endpoint with curl or open in browser, using the ip address from the previous step.
 
 `curl http://<ip-address>:5000/`
 
 ### Step 4
 
-Lookup the records on the nameserver
+Get the nameserver IP address
 
 `docker exec hello-world-front cat /etc/resolv.conf`
+
+Lookup the records on the nameserver, using the nameserver ip from the previous step
 
 `docker exec hello-world-front nslookup hello-world-back <nameserver-ip>`
 
@@ -58,7 +60,7 @@ Check the IP address of the backend
 
 #### Step 5d
 
-Call the frontend application endpoint with curl or open in browser to recheck that it is still working
+Call the frontend application endpoint with curl or open in browser, using the ip address from the previous step, to recheck that it is still working
 
 `curl http://<ip-address>:5000/`
 

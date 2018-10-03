@@ -2,13 +2,13 @@
 
 #### Step 1a
 
-Create a simple shell script to print an environment variable. [File Contents](script.sh)
+Create a simple shell script to print an environment variable. [script.sh](script.sh)
 
 `vi script.sh`
 
 #### Step 1b
 
-Create a Dockerfile that includes the script file and has a default value for the variable.  [File Contents](Dockerfile)
+Create a Dockerfile that includes the script file and has a default value for the variable.  [Dockerfile](Dockerfile)
 
 `vi Dockerfile`
 

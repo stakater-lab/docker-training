@@ -26,7 +26,7 @@ Specify the particular check categories in the docker-compose command arguments
 
 #### Step 3a
 
-Edit the daemon configuration file /etc/docker/daemon.json and fix the required settings. [File contents](daemon.json)
+Edit the daemon configuration file /etc/docker/daemon.json and fix the required settings. [daemon.json](daemon.json)
 
 `vi /etc/docker/daemon.json`
 
@@ -36,17 +36,25 @@ Restart docker daemon
 
 `kill -SIGHUP $(pidof dockerd)`
 
+Re-run the scan
+
+`docker-compose run --rm docker-bench-security "-c container_images,docker_daemon_configuration,docker_daemon_files"`
+
 ### Step 4
 
 Change the permissions on the daemon configuration file
 
 `chmod 644 /etc/docker/daemon.json`
 
+Re-run the scan
+
+`docker-compose run --rm docker-bench-security "-c container_images,docker_daemon_configuration,docker_daemon_files"`
+
 ### Step 5
 
 #### Step 5a
 
-Edit the Dockerfile for the image. [File Contents](Dockerfile)
+Edit the Dockerfile for the image and add a HEALTHCHECK. [Dockerfile](Dockerfile)
 
 `git clone https://github.com/stakater-lab/docker-training.git`
 
@@ -60,4 +68,7 @@ Rebuild the image
 
 `docker build -t stakaterlabs/hello-world-back .`
 
+Re-run the scan
+
+`docker-compose run --rm docker-bench-security "-c container_images,docker_daemon_configuration,docker_daemon_files"`
 

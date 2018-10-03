@@ -2,7 +2,7 @@
 
 #### Step 1a
 
-Create a docker compose file. [File contents](step1a/docker-compose.yml)
+Create a docker compose file. [docker-compose.yml](step1a/docker-compose.yml)
 
 `vi docker-compose.yaml`
 
@@ -26,7 +26,7 @@ Cleanup existing services
 
 #### Step 2b
 
-Edit the compose file to add a spec for a user-defined bridge network. [File contents](step2b/docker-compose.yml)
+Edit the compose file to add a spec for a user-defined bridge network. [docker-compose.yml](step2b/docker-compose.yml)
 
 `vi docker-compose.yml`
 
@@ -54,7 +54,7 @@ Cleanup existing services
 
 #### Step 3b
 
-Add a volume mount in the container. [File contents](step3b/docker-compose.yml)
+Edit the compose file and add a volume mount in the container. [docker-compose.yml](step3b/docker-compose.yml)
 
 `vi docker-compose.yml`
 
@@ -85,7 +85,7 @@ Clone the repository
 
 `git clone https://github.com/stakater-lab/docker-training.git`
 
-Edit the compose file to specify a build context instead of image. [File contents](step4b/docker-compose.yml)
+Edit the compose file to specify a build context instead of image. [docker-compose.yml](step4b/docker-compose.yml)
 
 `vi docker-compose.yml`
 

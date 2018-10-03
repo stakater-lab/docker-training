@@ -20,9 +20,11 @@ Create the container and mount the volume at the /vol mount point
 
 ### Step 4
 
-Let's write a small text file into the volume path. Let's verify the contents
+Let's write a small text file into the volume path.
 
 `docker exec hello-world-back sh -c "cd /vol && wget http://localhost:5000/getmessage"`
+
+Let's verify the contents
 
 `docker exec hello-world-back sh -c "cd /vol && ls -lah"`
 
