@@ -1,0 +1,16 @@
+{
+    "userns-remap": "default",
+    "live-restore": true,
+    "no-new-privileges": true,
+    "icc": false,
+
+    "experimental": true,
+    "debug": true,
+    "log-level": "info",
+    "insecure-registries": ["127.0.0.1"],
+    "hosts": ["unix:///var/run/docker.sock", "tcp://0.0.0.0:2375"],
+    "tls": false,
+    "tlscacert": "",
+    "tlscert": "",
+    "tlskey": ""
+}

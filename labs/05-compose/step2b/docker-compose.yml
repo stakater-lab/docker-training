@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  frontend:
+    image: stakaterlabs/hello-world-front
+    networks:
+    - mybridge
+  backend:
+    image: stakaterlabs/hello-world-back
+    networks:
+    - mybridge
+
+networks:
+  mybridge:
+    driver: bridge
+
